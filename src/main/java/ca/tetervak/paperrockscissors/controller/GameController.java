@@ -32,7 +32,7 @@ public class GameController {
         log.trace("play() is called");
         log.debug("userChoice = " + userChoice);
         Choice computerChoice = gameService.getRandomChoice();
-        GameData gameData = gameService.getGameData(userChoice, computerChoice);
+        GameData gameData = gameService.getGameData(userChoice);
         return new ModelAndView("Output", "gameData", gameData);
     }
 

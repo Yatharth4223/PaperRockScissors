@@ -11,6 +11,7 @@ public class GameService {
 
     private final Random random;
 
+//    We could have done a new keyword here but we don't need to because of @service
     public GameService(Random random) {
         this.random = random;
     }
@@ -19,8 +20,8 @@ public class GameService {
         this(new Random());
     }
 
-    public GameData getGameData(Choice playerOneChoice, Choice playerTwoChoice){
-        return new GameData(playerOneChoice, playerTwoChoice);
+    public GameData getGameData(Choice playerOneChoice){
+        return new GameData(playerOneChoice);
     }
 
     public Choice getRandomChoice(){

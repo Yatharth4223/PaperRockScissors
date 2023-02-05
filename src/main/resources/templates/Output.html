@@ -8,30 +8,17 @@
 </head>
 <body>
 <header>
-    <h1>Paper Rock or Scissors</h1>
+    <h1>Thanks for playing!</h1>
 </header>
 <main>
     <h2>Game Result</h2>
     <div class="choice-container">
-        <img src="../static/images/paper.png" class="choice" alt="paper"
-             th:src="@{|images/${gameData.playerOneChoice}.png|}" th:alt="${gameData.playerOneChoice}">
-            versus
-        <img src="../static/images/rock.png" class="choice" alt="rock"
-             th:src="@{|images/${gameData.playerTwoChoice}.png|}" th:alt="${gameData.playerTwoChoice}">
     </div>
     <p>
-        <label>Your choice:</label>&nbsp;<span th:text="${gameData.playerOneChoice}">paper</span>
-    </p>
-    <p>
-        <label>Computer choice:</label>&nbsp;<span th:text="${gameData.playerTwoChoice}">rock</span>
-    </p>
-    <p th:switch="${gameData.gameResult.name()}">
-        <label>Result:</label>&nbsp;
-        <span class="result" th:case="PLAYER_ONE_WINS">You won!</span>
-        <!--/*/
-        <span class="result" th:case="PLAYER_TWO_WINS">Computer won!</span>
-        <span class="result" th:case="REPLAY">Replay</span>
-        /*/-->
+        <img src="../static/images/${gameData.getGameResult()}.jpg" class="$userchoice" alt="Box1"
+             th:src="@{|images/${gameData.getGameResult()}.jpg|}" th:alt="${gameData.playerOneChoice}" height="150px" width="500px">
+        <h1></h1>
+        <label>Your prize:</label>&nbsp;<span th:text="${gameData.getGameResult()}"></span>
     </p>
     <p>
         <a href="Input.html" th:href="@{input}">Play Again!</a>

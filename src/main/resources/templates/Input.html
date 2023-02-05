@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-    <h1>Paper Rock or Scissors</h1>
+    <h1>Choose a box and see what You Get</h1>
 </header>
 <main>
     <h2>Select your choice</h2>
@@ -16,16 +16,16 @@
 
         <div class="choice-container">
             <div>
-                <label><input type="radio" name="userChoice" th:value="paper">Paper</label><br/>
-                <img src="../static/images/paper.png" class="choice" th:src="@{images/paper.png}" alt="paper">
+                <label><input type="radio" name="userChoice" th:value="Box1">Box1</label><br/>
+                <img src="../static/images/box.jpg" class="choice" th:src="@{images/box.jpg}" alt="Box1">
             </div>
             <div>
-                <label><input type="radio" name="userChoice" th:value="rock" checked>Rock</label><br/>
-                <img src="../static/images/rock.png" class="choice" th:src="@{images/rock.png}" alt="rock">
+                <label><input type="radio" name="userChoice" th:value="Box2" checked>Box2</label><br/>
+                <img src="../static/images/box.jpg" class="choice" th:src="@{images/box.jpg}" alt="Box2">
             </div>
             <div>
-                <label><input type="radio" name="userChoice" th:value="scissors">Scissors</label><br/>
-                <img src="../static/images/scissors.png" class="choice" th:src="@{images/scissors.png}" alt="scissors">
+                <label><input type="radio" name="userChoice" th:value="Box3">Box3</label><br/>
+                <img src="../static/images/box.jpg" class="choice" th:src="@{images/box.jpg}" alt="Box3">
             </div>
         </div>
 
